@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.8.4",
+  "canisters": {
+    "static_ic_website": {
+      "type": "motoko",
+      "main": "src/static_ic_website/main.mo"
+    },
+    "static_ic_website_assets": {
+      "type": "assets",
+      "source": [
+        "src/static_ic_website_assets/assets"
+      ],
+      "dependencies": [
+        "static_ic_website"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
